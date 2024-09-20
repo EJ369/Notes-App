@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/layout_bg"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/notesTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/notesTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/my_notes"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/notesAdd"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="2dp"
+            android:background="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/my_light_primary"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/add_icon" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notesSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notesTitleLayout">
+
+        <EditText
+            android:id="@+id/notesSearch"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_layout"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="5dp"
+            android:hint="@string/search_notes"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:startIconDrawable="@drawable/search_icon" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/notesFilter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/filter_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notesFilterTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/notesRecyclerview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notesSearchLayout">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/notesFilterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/by_category"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/black" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notesFilterTextLayout"
+        app:spanCount="2"
+        tools:listitem="@layout/item_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

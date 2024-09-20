@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@drawable/bottom_layout">
+
+    <TextView
+        android:id="@+id/bottomAddNotesHeading"
+        style="@style/TextAppearance.Material3.TitleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Add Notes"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottomAddNotesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomAddNotesHeading">
+
+        <EditText
+            android:id="@+id/bottomAddNotesTitle"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_layout"
+            android:hint="TITLE"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/itemCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/edittext_layout" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/bottomAddNotesMessage"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_layout"
+        android:gravity="start"
+        android:hint="NOTES"
+        android:maxHeight="300dp"
+        android:minHeight="150dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomAddNotesLayout" />
+
+    <LinearLayout
+        android:id="@+id/bottomCardColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomAddNotesMessage">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bottomAddNotesBlueColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/cardBlue"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="3dp">
+
+            <ImageView
+                android:id="@+id/bottomAddNotesBlueColorImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp"
+                android:src="@drawable/baseline_check_24" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bottomAddNotesGreenColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/cardGreen"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="3dp">
+
+            <ImageView
+                android:id="@+id/bottomAddNotesGreenColorImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bottomAddNotesYellowColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/cardYellow"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="3dp">
+
+            <ImageView
+                android:id="@+id/bottomAddNotesYellowColorImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bottomAddNotesRedColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/cardRed"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="3dp">
+
+            <ImageView
+                android:id="@+id/bottomAddNotesRedColorImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bottomAddNotesPurpleColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/cardPurple"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="3dp">
+
+            <ImageView
+                android:id="@+id/bottomAddNotesPurpleColorImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bottomAddNotesSaveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/edittext_layout"
+        android:text="SAVE"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomCardColor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

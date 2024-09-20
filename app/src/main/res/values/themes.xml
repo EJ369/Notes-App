@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyNotes" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/my_light_primary</item>
+        <item name="colorPrimaryVariant">@color/primaryColorDark</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryColorDark</item>
+        <item name="colorSurface">@color/surfaceColor</item>
+        <item name="layout_bg">@color/layout_bg</item>
+        <item name="black_white">@color/black</item>
+    </style>
+
+    <attr name="layout_bg" format="color" />
+    <attr name="black_white" format="color" />
+
+    <style name="Theme.MyNotes" parent="Base.Theme.MyNotes" />
+
+    <style name="PopupDialogTheme" parent="Theme.Material3.DayNight.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_layout</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.Material3.DayNight.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/confirm_dialog_layout</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+</resources>

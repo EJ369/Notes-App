@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">My Notes</string>
+    <string name="search_notes">Search Notes</string>
+    <string name="my_notes">My\nNotes</string>
+    <string name="by_category">By Category</string>
+    <string name="date">Date</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+
+    <string-array name="note_categories">
+        <item>All</item>
+        <item>Personal</item>
+        <item>Work</item>
+        <item>Education</item>
+        <item>Finance</item>
+        <item>Health</item>
+        <item>Shopping</item>
+        <item>Travel</item>
+        <item>Creative</item>
+        <item>Contacts</item>
+        <item>Entertainment</item>
+    </string-array>
+</resources>
